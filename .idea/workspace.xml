@@ -28,9 +28,9 @@
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="61">
-              <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="25" />
               <folding>
-                <marker date="1507394485000" expanded="false" signature="0:48" ph="/** Created by rishabhkhanna on 07/10/17. ...*/" />
+                <marker date="1507394682000" expanded="false" signature="0:48" ph="/** Created by rishabhkhanna on 07/10/17. ...*/" />
               </folding>
             </state>
           </provider>
@@ -146,12 +146,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1507391846943</updated>
-      <workItem from="1507391848427" duration="2437000" />
+      <workItem from="1507391848427" duration="2706000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2437000" />
+    <option name="totallyTimeSpent" value="2706000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="732" extended-state="6" />
@@ -197,9 +197,9 @@
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="61">
-          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="25" />
           <folding>
-            <marker date="1507394485000" expanded="false" signature="0:48" ph="/** Created by rishabhkhanna on 07/10/17. ...*/" />
+            <marker date="1507394682000" expanded="false" signature="0:48" ph="/** Created by rishabhkhanna on 07/10/17. ...*/" />
           </folding>
         </state>
       </provider>
