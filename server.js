@@ -5,7 +5,7 @@ const express = require('express');
 const keypress = require('keypress');
 const servo = require('pi-servo');
 keypress(process.stdin);
-
+let sv18 = new servo(18);
 process.stdin.on('keypress',function (ch, key) {
     console.log("-------")
     console.log(key.name);
