@@ -5,19 +5,50 @@ const express = require('express');
 const keypress = require('keypress');
 const servo = require('pi-servo');
 keypress(process.stdin);
-var sv18 = new servo(18);
+
+let sv18 = new servo(18);
+let sv23 = new servo(23);
+let sv24 = new servo(24);
+
+
+
 process.stdin.on('keypress',function (ch, key) {
     console.log("-------")
     console.log(key.name);
-    if(key.name === 'h'){
+    if(key.name === 'q'){
+        sv18.open().then(function(){
+            sv18.setDegree(0); // 0 - 180
+        });
+    }
+
+    if(key.name === 'w'){
         sv18.open().then(function(){
             sv18.setDegree(180); // 0 - 180
         });
     }
 
-    if(key.name === 'o'){
-        sv18.open().then(function(){
+    if(key.name === 'e'){
+        sv23.open().then(function(){
+            sv23.setDegree(0); // 0 - 180
+        });
+
+    }
+
+    if (key.name === 'r'){
+        sv23.open().then(function(){
+            sv18.setDegree(180); // 0 - 180
+        });
+    }
+
+    if(key.name === 't'){
+        sv24.open().then(function(){
             sv18.setDegree(0); // 0 - 180
+        });
+    }
+
+    if(key.name === 'y'){
+        sv24.open().then(function(){
+            sv18.setDegree(180); // 0 - 180
         });
     }
 
