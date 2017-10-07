@@ -36,7 +36,7 @@ process.stdin.on('keypress',function (ch, key) {
 
     if (key.name === 'r'){
         sv23.open().then(function(){
-            sv24.setDegree(180); // 0 - 180
+            sv23.setDegree(180); // 0 - 180
         });
     }
 
