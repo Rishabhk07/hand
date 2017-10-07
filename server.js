@@ -13,6 +13,10 @@ process.stdin.on('keypress',function (ch, key) {
 
         sv18.setDegree(180);
     }
+
+    if (key && key.ctrl && key.name == 'c') {
+        process.stdin.pause();
+    }
 });
 process.stdin.setRawMode(true);
 
