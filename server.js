@@ -36,19 +36,19 @@ process.stdin.on('keypress',function (ch, key) {
 
     if (key.name === 'r'){
         sv23.open().then(function(){
-            sv18.setDegree(180); // 0 - 180
+            sv24.setDegree(180); // 0 - 180
         });
     }
 
     if(key.name === 't'){
         sv24.open().then(function(){
-            sv18.setDegree(0); // 0 - 180
+            sv24.setDegree(0); // 0 - 180
         });
     }
 
     if(key.name === 'y'){
         sv24.open().then(function(){
-            sv18.setDegree(180); // 0 - 180
+            sv24.setDegree(180); // 0 - 180
         });
     }
 
