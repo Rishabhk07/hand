@@ -7,8 +7,10 @@ const servo = require('pi-servo');
 keypress(process.stdin);
 
 process.stdin.on('keypress',function (ch, key) {
+    console.log("-------")
     console.log(key.name);
     if(key.name === 'h'){
+
         sv18.setDegree(180);
     }
 });
