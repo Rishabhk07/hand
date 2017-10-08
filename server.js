@@ -92,7 +92,18 @@ process.stdin.on('keypress', function (ch, key) {
     }
 
     if(key.name === 'h' || key.name === 'H'){
-        moveHand('h')
+        for (let i = 0 ;i < 5 ; i ++ ){
+            if(i%2 === 0){
+                setTimeout(function () {
+                    moveHand('g')
+                },300)
+            }else {
+                setTimeout(function () {
+                    moveHand('l')
+                },300)
+
+            }
+        }
     }
 
     if (key && key.ctrl && key.name === 'c') {
