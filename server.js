@@ -7,7 +7,7 @@ const servo = require('pi-servo');
 const app = require('express')();
 keypress(process.stdin);
 
-const http = require('http').Server(app);
+const http = require('http').Server(app); 
 const io = require('socket.io')(http);
 
 let sv18 = new servo(18);
@@ -16,7 +16,18 @@ let sv24 = new servo(24);
 app.get('/', function (req, res) {
     res.send({success: true});
 })
+
+
+
 io.on('connection', function (socket) {
+
+    app.get('/blink',function (req, res) {
+        socket.emit('')
+    })
+
+    socket.on('blink',function (data) {
+        console.log(data);
+    })
     console.log("connection");
     socket.on('message', function (data) {
         let input = JSON.parse(data).msgChar;
