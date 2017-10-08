@@ -124,11 +124,12 @@ process.stdin.on('keypress', function (ch, key) {
                         moveHand('l')
                     }
                     a++;
+                    if(a === 5){
+                        clearInterval(interval);
+                    }
                 },500)
 
-        if(a === 5){
-                    clearInterval(interval);
-        }
+
 
         }
 
