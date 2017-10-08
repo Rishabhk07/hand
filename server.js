@@ -116,13 +116,18 @@ process.stdin.on('keypress', function (ch, key) {
     }
 
     if(key.name === 'h' || key.name === 'H'){
-
-                setInterval(function () {
-                    moveHand('g')
-                },800)
-                setInterval(function () {
-                    moveHand('l')
+                let a = 0;
+                let interval = setInterval(function () {
+                    if(a%2 === 0){
+                        moveHand('g')
+                    }
+                    a++;
                 },500)
+
+        if(a === 5){
+                    clearInterval(interval);
+        }
+
         }
 
     if (key && key.ctrl && key.name === 'c') {
