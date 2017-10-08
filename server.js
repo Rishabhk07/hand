@@ -77,6 +77,30 @@ function moveHand(input) {
             sv24.setDegree(180);
         })
     }
+
+    if(input === 'h' || input === 'H'){
+        sv18.open().then(function () {
+            sv18.setDegree(180);
+        })
+        sv23.open().then(function () {
+            sv23.setDegree(180);
+        })
+        sv24.open().then(function () {
+            sv24.setDegree(180);
+        })
+
+
+        sv18.open().then(function () {
+            sv18.setDegree(0);
+        })
+        sv23.open().then(function () {
+            sv23.setDegree(0);
+        })
+        sv24.open().then(function () {
+            sv24.setDegree(0);
+        })
+
+    }
 }
 process.stdin.on('keypress', function (ch, key) {
     console.log("-----" + key.name);
@@ -92,19 +116,15 @@ process.stdin.on('keypress', function (ch, key) {
     }
 
     if(key.name === 'h' || key.name === 'H'){
-        for (let i = 0 ;i < 5 ; i ++ ){
-            if(i%2 === 0){
-                setTimeout(function () {
+            setTimeout(function () {
+                setInterval(function () {
                     moveHand('g')
                 },1000)
-            }else {
-                setTimeout(function () {
+                setInterval(function () {
                     moveHand('l')
                 },1000)
-
-            }
+            },5000)
         }
-    }
 
     if (key && key.ctrl && key.name === 'c') {
         console.log("std in pause");
