@@ -23,7 +23,7 @@ io.on('connection', function (socket) {
 
 
     socket.on('blink',function (data) {
-        console.log(data);
+        console.log(data[0]);
         if(data[0] === 2){
             moveHand('g')
         }
