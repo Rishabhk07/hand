@@ -122,7 +122,7 @@ process.stdin.on('keypress', function (ch, key) {
                 },1000)
                 setInterval(function () {
                     moveHand('l')
-                },1000)
+                },2000)
             },5000)
         }
 
