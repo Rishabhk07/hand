@@ -100,6 +100,19 @@ function moveHand(input) {
         })
 
     }
+
+    if(key.name === 't' || key.name === 'T'){
+        sv18.open().then(function () {
+            sv18.setDegree(180);
+        })
+        sv23.open().then(function () {
+            sv23.setDegree(180);
+        })
+        sv24.open().then(function () {
+            sv24.setDegree(0);
+        })
+
+    }
 }
 process.stdin.on('keypress', function (ch, key) {
     console.log("-----" + key.name);
