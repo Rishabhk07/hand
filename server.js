@@ -101,7 +101,7 @@ function moveHand(input) {
 
     }
 
-    if(key.name === 't' || key.name === 'T'){
+    if(input === 't' || input === 'T'){
         sv18.open().then(function () {
             sv18.setDegree(180);
         })

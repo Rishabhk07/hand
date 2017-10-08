@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8fbabfc6-043c-4070-a521-a22fd5fbc35f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,10 +26,10 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2087">
-              <caret line="111" column="28" lean-forward="true" selection-start-line="111" selection-start-column="28" selection-end-line="111" selection-end-column="28" />
+            <state relative-caret-position="275">
+              <caret line="148" column="22" lean-forward="false" selection-start-line="148" selection-start-column="22" selection-end-line="148" selection-end-column="22" />
               <folding>
-                <marker date="1507456374000" expanded="false" signature="0:48" ph="/** Created by rishabhkhanna on 07/10/17. ...*/" />
+                <marker date="1507456469000" expanded="false" signature="0:48" ph="/** Created by rishabhkhanna on 07/10/17. ...*/" />
               </folding>
             </state>
           </provider>
@@ -146,12 +145,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1507391846943</updated>
-      <workItem from="1507391848427" duration="17069000" />
+      <workItem from="1507391848427" duration="17151000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17069000" />
+    <option name="totallyTimeSpent" value="17151000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="728" extended-state="6" />
@@ -195,10 +194,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2087">
-          <caret line="111" column="28" lean-forward="true" selection-start-line="111" selection-start-column="28" selection-end-line="111" selection-end-column="28" />
+        <state relative-caret-position="275">
+          <caret line="148" column="22" lean-forward="false" selection-start-line="148" selection-start-column="22" selection-end-line="148" selection-end-column="22" />
           <folding>
-            <marker date="1507456374000" expanded="false" signature="0:48" ph="/** Created by rishabhkhanna on 07/10/17. ...*/" />
+            <marker date="1507456469000" expanded="false" signature="0:48" ph="/** Created by rishabhkhanna on 07/10/17. ...*/" />
           </folding>
         </state>
       </provider>
