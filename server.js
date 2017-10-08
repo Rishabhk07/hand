@@ -57,7 +57,14 @@ function moveHand(input) {
         })
     }
 }
-// process.stdin.on('keypress',function (ch, key) {
+process.stdin.on('keypress',function (ch, key) {
+
+    if (key.name === 'g' || key.name === 'G'){
+        moveHand('g')
+    }
+    if (key.name === 'l' || key.name === 'L'){
+        moveHand('l')
+    }
 //     console.log("-------")
 //     console.log(key.name);
 //     if(key.name === 'q'){
@@ -97,10 +104,10 @@ function moveHand(input) {
 //         });
 //     }
 //
-//     if (key && key.ctrl && key.name == 'c') {
-//         process.stdin.pause();
-//     }
-// });
+    if (key && key.ctrl && key.name == 'c') {
+        process.stdin.pause();
+    }
+});
 process.stdin.setRawMode(true);
 process.stdin.resume();
 
