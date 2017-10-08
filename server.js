@@ -120,6 +120,8 @@ process.stdin.on('keypress', function (ch, key) {
                 let interval = setInterval(function () {
                     if(a%2 === 0){
                         moveHand('g')
+                    }else{
+                        moveHand('l')
                     }
                     a++;
                 },500)
