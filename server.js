@@ -28,6 +28,15 @@ function moveHand(input) {
     console.log(input);
     if (input === 'g' || input === 'G') {
         sv18.open().then(function () {
+            sv18.setDegree(0);
+        })
+        sv23.open().then(function () {
+            sv23.setDegree(0);
+        })
+        sv24.open().then(function () {
+            sv24.setDegree(0);
+        })
+        sv18.open().then(function () {
             sv18.setDegree(180);
         })
         sv23.open().then(function () {
@@ -48,7 +57,16 @@ function moveHand(input) {
             sv24.setDegree(0);
         })
     }
-    else if (input === 'o' || input === 'O') {
+    else if (input === 'p' || input === 'P') {
+        sv18.open().then(function () {
+            sv18.setDegree(0);
+        })
+        sv23.open().then(function () {
+            sv23.setDegree(0);
+        })
+        sv24.open().then(function () {
+            sv24.setDegree(0);
+        })
         sv23.open().then(function () {
             sv23.setDegree(180);
         })
