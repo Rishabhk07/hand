@@ -21,19 +21,18 @@ io.on('connection', function (socket) {
     socket.on('message', function (data) {
         let input = JSON.parse(data).msgChar;
         if (input === 'h' || input === 'H'){
-            for (let i = 0 ;i < 5 ; i ++ ){
-                if(i%2 === 0){
-                    setTimeout(function () {
-                        moveHand('g')
-                    },300)
-                }else {
-                    setTimeout(function () {
-                        moveHand('l')
-                    },300)
-
+            let a = 0;
+            let interval = setInterval(function () {
+                if(a%2 === 0){
+                    moveHand('g')
+                }else{
+                    moveHand('l')
                 }
-            }
-
+                a++;
+                if(a === 6){
+                    clearInterval(interval);
+                }
+            },500)
         }else{
             moveHand(input);
         }
