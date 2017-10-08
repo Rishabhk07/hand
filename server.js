@@ -109,6 +109,7 @@ process.stdin.on('keypress', function (ch, key) {
     if (key && key.ctrl && key.name === 'c') {
         console.log("std in pause");
         process.stdin.pause();
+        process.exit();
     }
 //     console.log("-------")
 //     console.log(key.name);
