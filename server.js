@@ -84,6 +84,14 @@ process.stdin.on('keypress', function (ch, key) {
     if (key.name === 'l' || key.name === 'L') {
         moveHand('l')
     }
+
+    if(key.name === 'p' || key.name === 'P'){
+        moveHand('p')
+    }
+
+    if(key.name === 'h' || key.name === 'H'){
+        moveHand('h')
+    }
 //     console.log("-------")
 //     console.log(key.name);
 //     if(key.name === 'q'){
