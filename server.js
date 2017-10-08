@@ -21,9 +21,19 @@ io.on('connection', function (socket) {
     socket.on('message', function (data) {
         let input = JSON.parse(data).msgChar;
         if (input === 'h' || input === 'H'){
-            setTimeout(function () {
-               moveHand('g')
-            },300)
+            for (let i = 0 ;i < 5 ; i ++ ){
+                if(i%2 === 0){
+                    setTimeout(function () {
+                        moveHand('g')
+                    },300)
+                }else {
+                    setTimeout(function () {
+                        moveHand('l')
+                    },300)
+
+                }
+            }
+
         }else{
             moveHand(input);
         }
@@ -58,13 +68,13 @@ function moveHand(input) {
     }
     if (input === 'p' || input === 'P') {
         sv18.open().then(function () {
-            sv18.setDegree(0);
+            sv18.setDegree(180);
         })
         sv23.open().then(function () {
-            sv23.setDegree(180);
+            sv23.setDegree(0);
         })
         sv24.open().then(function () {
-            sv24.setDegree(0);
+            sv24.setDegree(180);
         })
     }
 }
@@ -86,7 +96,7 @@ process.stdin.on('keypress', function (ch, key) {
     }
 
     if (key && key.ctrl && key.name === 'c') {
-        console.log()
+        console.log("std in pause");
         process.stdin.pause();
     }
 //     console.log("-------")
