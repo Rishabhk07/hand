@@ -20,7 +20,14 @@ io.on('connection', function (socket) {
     console.log("connection");
     socket.on('message', function (data) {
         let input = JSON.parse(data).msgChar;
-        moveHand(input);
+        if (input === 'h' || input === 'H'){
+            setTimeout(function () {
+               moveHand('g')
+            },300)
+        }else{
+            moveHand(input);
+        }
+
     })
 });
 
@@ -62,25 +69,19 @@ function moveHand(input) {
             sv18.setDegree(0);
         })
         sv23.open().then(function () {
-            sv23.setDegree(0);
+            sv23.setDegree(180);
         })
         sv24.open().then(function () {
             sv24.setDegree(0);
         })
-        sv23.open().then(function () {
-            sv23.setDegree(180);
-        })
-        sv24.open().then(function () {
-            sv24.setDegree(180);
-        })
     }
 }
-process.stdin.on('keypress',function (ch, key) {
+process.stdin.on('keypress', function (ch, key) {
 
-    if (key.name === 'g' || key.name === 'G'){
+    if (key.name === 'g' || key.name === 'G') {
         moveHand('g')
     }
-    if (key.name === 'l' || key.name === 'L'){
+    if (key.name === 'l' || key.name === 'L') {
         moveHand('l')
     }
 //     console.log("-------")
