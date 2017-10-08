@@ -96,11 +96,11 @@ process.stdin.on('keypress', function (ch, key) {
             if(i%2 === 0){
                 setTimeout(function () {
                     moveHand('g')
-                },300)
+                },1000)
             }else {
                 setTimeout(function () {
                     moveHand('l')
-                },300)
+                },1000)
 
             }
         }
