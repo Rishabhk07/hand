@@ -21,12 +21,16 @@ app.get('/', function (req, res) {
 
 io.on('connection', function (socket) {
 
-    app.get('/blink',function (req, res) {
-        socket.emit('')
-    })
 
     socket.on('blink',function (data) {
         console.log(data);
+        if(data[0] === 2){
+            moveHand('g')
+        }
+
+        if (data[0] === 1){
+            moveHand('l')
+        }
     })
     console.log("connection");
     socket.on('message', function (data) {
