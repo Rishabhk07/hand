@@ -35,15 +35,6 @@ function moveHand(input) {
     console.log(input);
     if (input === 'g' || input === 'G') {
         sv18.open().then(function () {
-            sv18.setDegree(0);
-        })
-        sv23.open().then(function () {
-            sv23.setDegree(0);
-        })
-        sv24.open().then(function () {
-            sv24.setDegree(0);
-        })
-        sv18.open().then(function () {
             sv18.setDegree(180);
         })
         sv23.open().then(function () {
@@ -53,7 +44,8 @@ function moveHand(input) {
             sv24.setDegree(180);
         })
 
-    } else if (input === 'l' || input === 'l') {
+    }
+    if (input === 'l' || input === 'l') {
         sv18.open().then(function () {
             sv18.setDegree(0);
         })
@@ -64,7 +56,7 @@ function moveHand(input) {
             sv24.setDegree(0);
         })
     }
-    else if (input === 'p' || input === 'P') {
+    if (input === 'p' || input === 'P') {
         sv18.open().then(function () {
             sv18.setDegree(0);
         })
@@ -77,7 +69,7 @@ function moveHand(input) {
     }
 }
 process.stdin.on('keypress', function (ch, key) {
-
+    console.log("-----" + key.name);
     if (key.name === 'g' || key.name === 'G') {
         moveHand('g')
     }
@@ -91,6 +83,11 @@ process.stdin.on('keypress', function (ch, key) {
 
     if(key.name === 'h' || key.name === 'H'){
         moveHand('h')
+    }
+
+    if (key && key.ctrl && key.name === 'c') {
+        console.log()
+        process.stdin.pause();
     }
 //     console.log("-------")
 //     console.log(key.name);
@@ -131,9 +128,7 @@ process.stdin.on('keypress', function (ch, key) {
 //         });
 //     }
 //
-    if (key && key.ctrl && key.name == 'c') {
-        process.stdin.pause();
-    }
+
 });
 process.stdin.setRawMode(true);
 process.stdin.resume();
