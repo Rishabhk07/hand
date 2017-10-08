@@ -13,21 +13,48 @@ const io = require('socket.io')(http);
 let sv18 = new servo(18);
 let sv23 = new servo(23);
 let sv24 = new servo(24);
-app.get('/', function (req,res) {
+app.get('/', function (req, res) {
     res.send({success: true});
 })
 io.on('connection', function (socket) {
     console.log("connection");
-   socket.on('message', function (data) {
-       let input = JSON.parse(data).msgChar;
-       moveHand(input);
-   })
+    socket.on('message', function (data) {
+        let input = JSON.parse(data).msgChar;
+        moveHand(input);
+    })
 });
 
 function moveHand(input) {
     console.log(input);
-    if (input === 'g' || input === 'G'){
+    if (input === 'g' || input === 'G') {
+        sv18.open().then(function () {
+            sv18.setDegree(180);
+        })
+        sv23.open().then(function () {
+            sv23.setDegree(180);
+        })
+        sv24.open().then(function () {
+            sv24.setDegree(180);
+        })
 
+    } else if (input === 'l' || input === 'l') {
+        sv18.open().then(function () {
+            sv18.setDegree(0);
+        })
+        sv23.open().then(function () {
+            sv23.setDegree(0);
+        })
+        sv24.open().then(function () {
+            sv24.setDegree(0);
+        })
+    }
+    else if (input === 'o' || input === 'O') {
+        sv23.open().then(function () {
+            sv23.setDegree(180);
+        })
+        sv24.open().then(function () {
+            sv24.setDegree(180);
+        })
     }
 }
 // process.stdin.on('keypress',function (ch, key) {
@@ -74,12 +101,10 @@ function moveHand(input) {
 //         process.stdin.pause();
 //     }
 // });
-// process.stdin.setRawMode(true);
-//
-//
-// process.stdin.resume();
+process.stdin.setRawMode(true);
+process.stdin.resume();
 
-http.listen('9999',()=>{
+http.listen('9999', () => {
     console.log("Magic happens at 9999");
-    });
+});
 
